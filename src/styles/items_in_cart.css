@@ -1,0 +1,12 @@
+.items-in-cart {
+    position: relative;
+    margin: 0;
+    left: 50px;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
