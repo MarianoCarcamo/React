@@ -4,6 +4,7 @@
         "title": "GUDUCHI Aceite esencial - 10 ml",
         "price": 6999.00,
         "stock": 5,
+        "category":"hogar",
         "img": "1.jpg"
     },
     {
@@ -11,6 +12,7 @@
         "title": "PALO SANTO - AROMATIZANTE AMBIENTAL 125 ml",
         "price": 7999.00,
         "stock": 3,
+        "category":"hogar",
         "img": "2.jpg"
     },
     {
@@ -18,6 +20,7 @@
         "title": "ESPARTA Eau de Parfum - 50 ml",
         "price": 11999.00,
         "stock": 2,
+        "category":"perfume",
         "img": "3.jpg"
     },
     {
@@ -25,6 +28,7 @@
         "title": "MANHATTAN Eau de Parfum - 50 ml",
         "price": 11999.00,
         "stock": 5,
+        "category":"perfume",
         "img": "4.jpg"
     },
     {
@@ -32,6 +36,7 @@
         "title": "FRESCA NATURALEZA - Aromatizante textil 500 ml",
         "price": 6499.00,
         "stock": 7,
+        "category":"hogar",
         "img": "5.jpg"
     },
     {
@@ -39,6 +44,7 @@
         "title": "CREMA REVITALIZANTE OLIVA, MIEL Y PROPOLEO - 100 g",
         "price": 9999.00,
         "stock": 8,
+        "category":"cosmetica",
         "img": "6.jpg"
     },
     {
@@ -46,6 +52,7 @@
         "title": "ORTIGA Y ROMERO SHAMPOO - 210 ml",
         "price": 6299.00,
         "stock": 3,
+        "category":"cosmetica",
         "img": "7.jpg"
     },
     {
@@ -53,6 +60,7 @@
         "title": "COCO SHAMPOO - 210 ml",
         "price": 6299.00,
         "stock": 5,
+        "category":"cosmetica",
         "img": "8.jpg"
     },
     {
@@ -60,6 +68,7 @@
         "title": "LABIAL CREMOSO - 4 g",
         "price": 5499.00,
         "stock": 10,
+        "category":"maquillaje",
         "img": "9.jpg"
     },
     {
@@ -67,6 +76,7 @@
         "title": "DUO DE SOMBRAS - 3 g",
         "price": 7999.00,
         "stock": 5,
+        "category":"maquillaje",
         "img": "10.jpg"
     }
 ]
