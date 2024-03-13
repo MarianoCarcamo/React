@@ -1,4 +1,22 @@
-[
+import { initializeApp } from "firebase/app";
+import { getFirestore, addDoc, collection, getDocs, getDoc, doc, updateDoc, deleteDoc } from 'firebase/firestore'
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAd8yJG0l_t-yQ2MdatykmhxItS6z8cOKw",
+  authDomain: "fycbeauty.firebaseapp.com",
+  projectId: "fycbeauty",
+  storageBucket: "fycbeauty.appspot.com",
+  messagingSenderId: "730360318802",
+  appId: "1:730360318802:web:f61887f02857b1a169088b"
+};
+
+const app = initializeApp(firebaseConfig);
+
+// Consultar BDD
+const bdd = getFirestore()
+
+//Array de productos
+const productos = [
     {
         "title": "GUDUCHI Aceite esencial - 10 ml",
         "price": 6999.00,
@@ -70,3 +88,54 @@
         "img": "https://firebasestorage.googleapis.com/v0/b/fycbeauty.appspot.com/o/10.jpg?alt=media&token=33f4999e-109e-4160-8395-dcf746ef58ce"
     }
 ]
+
+// crear productos
+
+export const createProducts = async () => {
+    productos.forEach( async (prod) => {
+        await addDoc(collection(bdd, "productos"),{
+            "title": prod.title,
+            "price": prod.price,
+            "stock": prod.stock,
+            "category":prod.category,
+            "img": prod.img
+        })
+    })
+}
+
+export const getProducts = async () => {
+    const productos = await getDocs(collection(bdd,"productos"))
+    const items = productos.docs.map(prod => {return {id: prod.id,...prod.data()}})
+    return items
+}
+
+export const getProduct = async (id) => {
+    const producto = await getDoc(doc(bdd,"productos",id))
+    const item = {id: producto.id,...producto.data()}
+    return item
+}
+
+export const updateProduct = async (id, info) => {
+    await updateDoc(doc(bdd,"productos", id), info)
+}
+
+export const deleteProduct = async (id) => {
+    await deleteDoc(doc(bdd,"productos", id))
+}
+
+// Crear y leer ordenes de compra
+export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {
+    const ordenCompra = await addDoc(collection(bdd, "ordenesCompra"), {
+        cliente: cliente,
+        items: carrito,
+        precioTotal: precioTotal,
+        fecha: fecha
+    })
+    return ordenCompra
+}
+
+export const getOrdenCompra = async (id) =>{
+    const ordenCompra = await getDoc(doc(bdd,"ordenesCompra",id))
+    const item = { id: ordenCompra.id, ...ordenCompra.data()}
+    return item
+}

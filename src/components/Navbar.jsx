@@ -4,41 +4,38 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div className="container-fluid">
-                <Link to={'/'}>
-                    <a className="navbar-brand" href="#">F&C Beauty</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+        <nav className="navbar navbar-dark navbar-expand-lg bg-body-tertiary p-0">
+            <div className="container-fluid bg-dark-primary p-2">
+                <Link className="text-decoration-none" to={'/'}>
+                    <span className="navbar-brand text-color-white p-4 fs-2" style={{fontFamily: "Lora"}}>F&C Beauty</span>
                 </Link>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul className="d-flex w-100 navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
                         <li className="nav-item">
-                            <Link to={'/category/maquillaje'}>
-                                <button className="nav-link">Maquillaje</button>
+                            <Link className="text-decoration-none" to={'/category/maquillaje'}>
+                                <button className="nav-link text-color-white">Maquillaje</button>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/category/perfume'}>
-                                <button className="nav-link">Perfumería</button>
+                            <Link className="text-decoration-none" to={'/category/perfume'}>
+                                <button className="nav-link text-color-white">Perfumería</button>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/category/cosmetica'}>
-                                <button className="nav-link">Cosmética</button>
+                            <Link className="text-decoration-none"  to={'/category/cosmetica'}>
+                                <button className="nav-link text-color-white">Cosmética</button>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/category/hogar'}>
-                                <button className="nav-link">Hogar</button>
+                            <Link className="text-decoration-none"  to={'/category/hogar'}>
+                                <button className="nav-link text-color-white">Hogar</button>
                             </Link>
                         </li>
                     </ul>
                 </div>
-
-                <CartWidget/>
-            
             </div>
         </nav>
     );

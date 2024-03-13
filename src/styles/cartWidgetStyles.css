@@ -1,0 +1,21 @@
+.items-in-cart {
+    position: fixed;
+    margin: 0;
+    right: 3%;
+    background-color: #512DA8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.cart{
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    background-color: #D1C4E9;
+    border: 3px solid #512DA8;
+    border-radius: 50%;
+}

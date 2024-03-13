@@ -1,23 +1,20 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail'
+import { getProduct } from "../firebase/firebase.js"
 
 const ItemDetailsContainer = () => {
     const [item, setItem] = useState([])
     const { idproduct } = useParams()
 
     useEffect(() => {
-        fetch('../data/productos.json')
-            .then( response => response.json())
-            .then( data => {
-                const prod = data.find( producto => producto.id == idproduct)
-                if(prod)
-                    setItem(prod)
-            })
+        getProduct(idproduct)
+            .then( prod => setItem(prod))
+            .catch(error => console.log(error))
     }, [])
 
     return (
-        <div className='container text-center vh-100'>
+        <div className='d-flex justify-content-center text-center light-primary-color' style={{minHeight: "86.4vh"}}>
             <ItemDetail item={item}/>
         </div>
     );

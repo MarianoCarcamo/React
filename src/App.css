@@ -1,0 +1,51 @@
+.bg-primary {
+    background-color: #673AB7 !important;
+}
+
+.bg-dark-primary {
+    background-color: #512DA8;
+}
+
+.light-primary-color {
+    background-color: #D1C4E9;
+}
+
+.text-color-white {
+    color: #FFFFFF;
+}
+
+.accent-color {
+    background-color: #E040FB;
+}
+
+.accent-text-color {
+    color: #E040FB;
+}
+
+.primary-text {
+    color: #BDBDBD;
+}
+
+.bg-secondary {
+    background-color: #757575;
+}
+
+.border-item{
+    border-style: solid;
+    border-color: #512DA8;
+    border-width: 2px;
+}
+
+input:focus{
+    outline: 3px solid #673AB7!important;
+    border-style: none !important;
+}
+
+.btn-hover:hover{
+    background-color: transparent !important;
+    color:#000000;
+}
+
+.cart-hover:hover{
+    color:#512DA8;
+}

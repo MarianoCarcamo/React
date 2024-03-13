@@ -1,17 +1,23 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import "../styles/items_in_cart.css"
+import "../styles/cartWidgetStyles.css"
+import { useCarritoContext } from '../context/CartContext';
+import { Link } from "react-router-dom"
 
 const CartWidget = () => {
+    const { getItemQuantity } = useCarritoContext()
+    
     return (
-        <div className="d-flex fs-3">
+        <div className="cart">
             <div className="items-in-cart">
-                <p>0</p>
+                <p>{getItemQuantity()}</p>
             </div>
-            <button className='btn fs-4 p-0 m-2'>
-                <FontAwesomeIcon icon={faCartShopping} />
-            </button>
+            <Link to={'/cart'}>
+                <button className='btn cart-hover fs-2 accent-text-color'>
+                    <FontAwesomeIcon icon={faCartShopping} />
+                </button>
+            </Link>
         </div>
     );
 }
