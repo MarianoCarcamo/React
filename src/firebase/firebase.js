@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, addDoc, collection, getDocs, getDoc, doc, updateDoc, deleteDoc } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAd8yJG0l_t-yQ2MdatykmhxItS6z8cOKw",
+  apiKey: "",
   authDomain: "fycbeauty.firebaseapp.com",
   projectId: "fycbeauty",
   storageBucket: "fycbeauty.appspot.com",
