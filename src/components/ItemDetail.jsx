@@ -23,7 +23,7 @@ const ItemDetail = ( {item} ) => {
             <div>
                 <img className="img-fluid" src={`${item.img}`} alt={`Imagen de ${item.title}`} />
             </div>
-            <div>
+            <div className='p-3'>
                 <div>
                     <h2>{item.title}</h2>
                     <h3>Precio: ${item.price}</h3>

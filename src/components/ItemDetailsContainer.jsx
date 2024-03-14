@@ -14,7 +14,7 @@ const ItemDetailsContainer = () => {
     }, [])
 
     return (
-        <div className='d-flex justify-content-center text-center light-primary-color' style={{minHeight: "86.4vh"}}>
+        <div className='d-flex justify-content-center text-center light-primary-color' style={{minHeight: "100vh"}}>
             <ItemDetail item={item}/>
         </div>
     );
